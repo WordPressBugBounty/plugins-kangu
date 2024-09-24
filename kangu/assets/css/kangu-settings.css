@@ -1,0 +1,217 @@
+#wpcontent {
+    padding-left: 0;
+}
+
+.woocommerce-layout__header {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 0;
+    position: fixed;
+    width: calc(100% - 160px);
+    top: 32px;
+    z-index: 1001;
+}
+
+.woocommerce-layout__header-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+}
+
+.woocommerce-layout__header-heading {
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 40px;
+    flex: 1 auto;
+    height: 60px;
+    background: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.woocommerce-layout__primary {
+    margin: 90px 0 0 40px;
+}
+
+.components-button-custom, .components-card.is-size-medium.woocommerce-task-card {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.components-card.is-size-medium.woocommerce-task-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+    background: rgb(255, 255, 255);
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid rgb(226, 228, 231);
+    margin-bottom: 15px;
+}
+
+.components-card__body {
+    max-width: 390px;
+    margin-left: 10%;
+}
+
+.is-size-full {
+    max-width: 100%;
+    width: 80%;
+}
+
+.is-size-full input {
+    width: 100%;
+}
+
+.components-button-custom {
+    justify-content: left;
+    margin-top: 20px;
+}
+
+.components-button-custom .button, .components-button-custom .button:hover {
+    padding: 5px 10px;
+    background: #FF6600!important;
+    border-color: #FF6600!important;
+    box-shadow: none !important;
+    width: 100%;
+    text-align: center;
+}
+
+.components-button-custom.auto .button {
+    width: auto !important;
+}
+
+.woocommerce-task-dashboard__container {
+    margin: 24px 36px;
+}
+
+.woocommerce-task-title {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2c3338;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.woocommerce-task__recommended-ribbon {
+    transform: rotate(-45deg) translate(-50%,-70%);
+    background: #2c3338;
+    color: #fff;
+    font-size: 11px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1;
+    padding: 7px 40px;
+    transform-origin: top left;
+    margin-top: 36px;
+    margin-left: 36px;
+}
+
+.toggle-control {
+    display: block;
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.toggle-control input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.toggle-control input:checked ~ .control {
+    background-color: #FF6600;
+}
+.toggle-control input:checked ~ .control:after {
+    left: 26px;
+}
+
+.toggle-control .control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 45px;
+    border-radius: 25px;
+    background-color: darkgray;
+    transition: background-color 0.15s ease-in;
+}
+
+.toggle-control .control:after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 25px;
+    background: white;
+    transition: left 0.15s ease-in;
+}
+
+.woocommerce-list__item-inner {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    justify-content: center;
+}
+
+.woocommerce-list__item-before {
+    margin-right: 10px;
+}
+
+.woocommerce-task__icon {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background: #1F9970!important;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-center {
+    justify-content: center!important;
+}
+
+.woocommerce-list__item-auth {
+    color: #1F9970!important;
+}
+
+.woocommerce-task__info {
+    background: #3582c4!important;
+}
+
+.woocommerce-list__item-auth-info {
+    color: #3582c4!important;
+}
+
+.button-kangu, .button-kangu:focus {
+    text-align: center;
+    padding: 5px 10px!important;
+    background: #FF6600!important;
+    border-color: #FF6600!important;
+    box-shadow: none!important;
+}
+
+#update-nag, .update-nag, .notice {
+    display: none !important;
+}

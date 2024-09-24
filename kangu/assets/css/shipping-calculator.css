@@ -1,0 +1,31 @@
+#rp_shipping_calculator{
+    margin-top:10px;
+    max-width: 400px;}
+.rp_shipping_button{
+    margin-bottom:10px;
+}
+.rp_shiiping_form{
+    display: block;
+}
+.loaderimage{
+    display:none;
+    margin-left:5px;
+}
+.rp_message{margin-bottom:10px;}
+.rp_error{color:red;}
+.rp_success{color:green;}
+.rp_shipping_button .btn_shipping{
+    padding:8px 10px;
+    text-align: center;
+    display:inline-block;
+    cursor:pointer;
+}
+
+.shipping_options_price {
+    list-style: square; 
+    margin-left: 20px;
+}
+
+.shipping_options_price li{
+    padding: 7px;
+}
