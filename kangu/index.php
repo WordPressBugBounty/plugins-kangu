@@ -4,7 +4,7 @@
   * Plugin Name:          Kangu - Se vai de Kangu, vai bem!
   * Plugin URI:           https://www.kangu.com.br/woocommerce
   * Description:          Diversas transportadoras e pontos de retirada para você economize até 75% no frete!
-  * Version:              2.3.2
+  * Version:              2.3.3
   * Author:               Kangu
   * License:              GPLv3 or later
   * WC requires at least: 3.0

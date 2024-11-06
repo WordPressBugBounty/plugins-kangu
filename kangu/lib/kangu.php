@@ -119,4 +119,52 @@
             \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
         }
     });
+
+    add_action('rest_api_init', function () {
+        register_rest_route('kangu/api', '/update-token', array(
+            'methods' => 'POST',
+            'callback' => 'kangu_update_token',
+        ));
+    });
+    
+    function kangu_update_token(WP_REST_Request $request)
+    {
+        try {
+            $token = sanitize_text_field( $request->get_param('token') );
+            $consumer_secret = sanitize_text_field( $request->get_param('cs') );
+            $consumer_key = wc_api_hash( sanitize_text_field( $request->get_param('ck') ) );
+        
+            if (empty($token) || empty($consumer_secret) || empty($consumer_key)) {
+                return new WP_REST_Response(array('message' => 'Bad Request'), 400);
+            }
+        
+            global $wpdb;
+        
+            $key_data = $wpdb->get_row(
+                $wpdb->prepare(
+                    "SELECT * FROM {$wpdb->prefix}woocommerce_api_keys WHERE consumer_secret = %s AND consumer_key = %s",
+                    $consumer_secret,
+                    $consumer_key
+                )
+            );
+        
+            if (!$key_data) {
+                return new WP_REST_Response(array('message' => 'Unauthorized'), 401);
+            }
+        
+            $settings = get_option('rpship-calculator-setting');
+
+            if (!is_array($settings)) {
+                return new WP_REST_Response(array('message' => 'Unprocessable Entity'), 422);
+            }
+
+            $settings['token_kangu'] = $token;
+            update_option('rpship-calculator-setting', $settings);
+
+            return new WP_REST_Response(array('message' => 'Token atualizado com sucesso.'), 200);
+
+        } catch ( Exception $e ) {
+            return new WP_Error( 'error', $e->getMessage() );
+        }        
+    }
 ?>

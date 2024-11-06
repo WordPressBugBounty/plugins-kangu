@@ -3,7 +3,7 @@ Contributors: gokangu
 Tags: shipping, delivery, kangu, woocommerce, fretes, logística
 Requires at least: 4.0
 Tested up to: 6.3
-Stable tag: 2.3.2
+Stable tag: 2.3.3
 Requires PHP: 5.6
 License: GNU General Public License v3.0
 License URI: https://www.gnu.org/licenses/gpl-3.0.pt-br.html
@@ -114,6 +114,9 @@ Não, a Kangu é uma rede que conecta transportadoras, lojistas e pontos de envi
 == Screenshots ==
 
 == Changelog ==
+
+= 2.3.3 - 2024/11/05 =
+- Atualizações de segurança.
 
 = 2.3.2 - 2024/05/06 =
 - Cupom de Desconto para novos cadastros e ajustes na descrição do Plugin.
