@@ -679,8 +679,9 @@ if (!class_exists('KanguShipping')) {
 
             $data['base_url']       = urlencode(get_site_url());
             $data['consumer_key']   = $consumer_key;
+            $data['origin']         = 'wooco';
 
-            wp_redirect(sprintf('https://kangu.com.br/woocommerce-login?%s', rawurldecode(http_build_query($data))));
+            wp_redirect(sprintf('https://portal.kangu.com.br/platform/install?%s', rawurldecode(http_build_query($data))));
 
             exit;
         }
